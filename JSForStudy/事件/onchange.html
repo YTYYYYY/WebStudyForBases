@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function onchangefun1(){
+            console.log("static onchange!");
+        }
+
+        window.onchange = function (){
+            document.getElementById("sel").onchange = function (){
+                console.log("Dynamic onchange!");
+            }
+        }
+    </script>
+</head>
+<body>
+    Hello~:
+<select onchange="onchangefun1()">
+    <option>--祎--</option>
+    <option>--哥--</option>
+    <option>--没--</option>
+    <option>--基--</option>
+    <option>--击--</option>
+</select><br/>
+    World~:
+<select id="sel">
+    <option>--基--</option>
+    <option>--尼--</option>
+    <option>--太--</option>
+    <option>--霉--</option>
+</select>
+</body>
+</html>

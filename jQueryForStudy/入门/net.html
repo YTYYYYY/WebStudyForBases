@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--
+        导入jQuery文件
+    -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        /*window.onload = function (){
+            document.getElementById("btnId").onclick = function (){
+                alert('Hello~');
+            }
+        }*/
+
+        //jQuery书写
+        $(function (){ //表示页面加载完之后，相当于onload事件
+            var btnObj = $("#btnId");
+            btnObj.click(function (){
+                alert('Hello~');
+            })
+            $("<div>"+
+                    "<span>div-span1</span>" +
+                    "<span>div-span2</span>" +
+                "</div>").appendTo("body");
+        })
+
+
+    </script>
+</head>
+<body>
+    <button id="btnId">SayHello</button>
+</body>
+</html>

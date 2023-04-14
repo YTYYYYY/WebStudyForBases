@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function onsubmitfun1(){
+            alert('非法填写！');
+            //要验证所有表单是否合法，如果不合法，就则阻止表单提交
+            //return false 可以阻止表单提交
+            return false;
+        }
+
+        window.onsubmit = function (){
+            document.getElementById("btn").onsubmit = function (){
+                alert('非法填写！');
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<!--
+    return false 可以阻止表单提交
+-->
+<form action="http://localhost:8080" method="get" onsubmit="return onsubmitfun1()">
+    <button type="submit">按钮1</button>
+</form>
+<br/>
+<form action="http://localhost:8080" method="get" id="btn">
+    <button type="submit">按钮2</button>
+</form>
+</body>
+</html>

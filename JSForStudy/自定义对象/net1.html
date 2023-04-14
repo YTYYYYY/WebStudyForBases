@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        对象的定义：
+            var 变量名 = new Object();     //对象实例
+            变量名.属性名 = 值;             //定义一个属性
+            变量名.函数名 = function(){};   //定义一个函数
+        对象的访问：
+            变量名.属性名 / 函数名();
+    -->
+    <!--
+        {}大括号形式的自定义对象
+            var obj = {                 //空对象
+                属性名 : 值 ,               //定义一个属性 （冒号和逗号！**）
+                属性名 : 值 ,               //定义一个属性
+                函数名 : function(){}      //定义一个函数
+            };
+
+
+    -->
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        /*var obj = new Object();
+        alert(typeof obj);
+        obj.name = "yty";
+        obj.age = 18;
+        obj.fun = function (){
+            alert("hello!"+obj.name);
+        }
+        obj.fun();
+        alert(obj.age);*/
+
+        var obj = {
+            name : "yty" ,
+            age : 19 ,
+            fun1 : function (){
+                alert("Hello~");
+            }
+        };
+        alert(obj.name);
+        obj.fun1();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

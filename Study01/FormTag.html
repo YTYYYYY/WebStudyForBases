@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+    <form> </form> 标签就是表单
+        <input type="text" /> 为文本输入框        value属性设置默认显示内容
+        <input type="password"/> 为密码输入框     value属性设置默认显示内容
+        <input type="radio" /> 为单选框          name属性可以对其进行分组   checked="checked"表示默认选中
+        <input type="checkbox"/> 为复选框        checked="checked"表示默认选中
+        <select> <select/> 为下拉框
+            <option> <option> 为下拉框选项
+                selected="selected" 属性为默认选项
+        <textarea> </textarea> 为多行文本输入
+            rows 属性设置显示几行的高度
+            cols 属性设置每行可以显示几个字符
+        <input type="reset"/> 为重置按钮          value属性修改按钮显示值
+        <input type="submit"/> 为提交按钮         value属性修改按钮显示值
+        <input type="button"/> 为按钮            value属性修改按钮显示值
+        <input type="hidden"/> 为隐藏域(当我们要发送某些信息，而这些信息不需要用户参与
+                                        就可以使用英藏玉(提交的时候同时发送给服务器))
+
+-->
+
+<!--
+    form 标签是表单标签
+        action属性设置提交的服务器地址
+        method属性设置提交的方式GET（默认值）或POST
+    1、表单提交的时候，数据没有提交给服务器的三种情况：
+        表单项没有name属性值
+        单选、复选（下拉列表中的option属性）都要添加value属性，以便发送给服务器
+        表单项不在提交的form标签中
+    2、method：
+        GET请求的特点：
+            浏览器地址中的地址是：action属性[+?+请求参数]
+                请求参数的格式是：name=value &...
+            不安全
+            它有数据长度的限制
+        POST请求的特点：
+            浏览器地址栏中只有action属性
+            相对于GET请求要安全
+            理论上来没有数据长度的限制
+
+-->
+<form action="http://localhost:8080" method="get">
+    <input type="hidden" name="action" value="login...">
+    <h1 align="center">用户注册<br/></h1>
+    <table align="center">
+        <tr>
+            <td>用户名称：</td>
+            <td><input type="text" name="username" value="默认值"/></td>
+        </tr>
+        <tr>
+            <td>用户密码：</td>
+            <td><input type="password" name="password" maxlength="5"/></td>
+        </tr>
+        <tr>
+            <td>确认密码：</td>
+            <td><input type="password" name="repassword" maxlength="5"/></td>
+        </tr>
+        <tr>
+            <td>性别：</td>
+            <td><input type="radio" name="sex" checked="checked" value="boy"/> 男
+                <input type="radio" name="sex" value="girl"/>女
+            </td>
+        </tr>
+        <tr>
+            <td> 兴趣爱好：</td>
+            <td><input type="checkbox" name="hobby" value="Java"/>Java
+                <input type="checkbox" name="hobby" value="C++"/>C++
+                <input type="checkbox" name="hobby" value="Python"/>Python
+            </td>
+        </tr>
+        <tr>
+            <td>国籍：</td>
+            <td>
+                <select name="national">
+                    <option value="none">&#45;&#45;请选择国籍&#45;&#45;</option>
+                    <option value="cn" selected="selected">中国</option>
+                    <option value="am">美国</option>
+                    <option value="ja">日本</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>自我评价：</td>
+            <td><textarea rows="10" cols="20" name="desc">666666</textarea></td>
+        </tr>
+        <tr>
+            <td align="center"><input type="reset" value="Reset"/></td>
+            <td align="center"><input type="submit" value="Submit"/></td>
+        </tr>
+    </table>
+</form>
+
+    <!--<form>
+        用户名称：<input type="text" value="默认值"/><br/>
+        用户密码：<input type="password" maxlength="5"/><br/>
+        确认密码：<input type="password" maxlength="5"/><br/>
+        性别：<input type="radio" name="sex" checked="checked"/> 男
+            <input type="radio" name="sex" />女<br/>
+        兴趣爱好：<input type="checkbox"/>Java
+                <input type="checkbox"/>C++
+                <input type="checkbox"/>Python<br/>
+        国籍：<select>
+                <option>&#45;&#45;请选择国籍&#45;&#45;</option>
+                <option selected="selected">中国</option>
+                <option>美国</option>
+                <option>日本</option>
+            </select><br/>
+        自我评价：<textarea rows="5" cols="10">666666</textarea><br/>
+        <input type="reset" value="Reset" />
+        <input type="submit" value="提交!" />
+        <input type="button" value="阿牛"/><br/>
+        <input type="file"/> <br/>
+        <input type="hidden"/>
+    </form>-->
+</body>
+</html>

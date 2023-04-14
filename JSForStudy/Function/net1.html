@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        /*JS不支持函数重载*/
+        function fun1(a,b){
+            alert(a+"+"+b);
+        }
+        function fun1() {
+            alert('我是沙比');
+        }
+        fun1();//我是沙比
+        fun1(1,"abc");//我是沙比
+    </script>
+</head>
+<body>
+
+</body>
+</html>

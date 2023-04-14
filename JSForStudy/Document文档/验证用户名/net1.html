@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="Demo.js"></script>
+    <link rel="stylesheet" type="text/css" href="mo.css">
+</head>
+<body>
+<br/><br/>
+<h1>用户注册</h1>
+    <table>
+        <tr>
+            <td align="right">用户名:</td>
+            <td><input onblur="check()" type="text" id="username"/></td>
+            <td width="250px"><span id="usernameSpan">长度5-12，只能含数字、字母、下划线</span></td>
+        </tr>
+        <tr>
+            <td align="right">密码:</td>
+            <td colspan="2"><input type="password" id="pw"/></td>
+        </tr>
+        <tr>
+            <td align="right">再次输入密码:</td>
+            <td colspan="2"><input type="password" id="repw"/></td>
+        </tr>
+        <tr>
+            <td align="right">擅长语言:</td>
+            <td colspan="2">
+                <input type="checkbox" name="hobby" value="cpp">C++
+                <input type="checkbox" name="hobby" value="java">Java
+                <input type="checkbox" name="hobby" value="python">Python
+                &nbsp&nbsp
+                <button onclick="checkNone()">不选</button>
+                <button onclick="checkAll()">全选</button>
+            </td>
+        </tr>
+
+        <!--<tr>
+            <td colspan="2" align="center">
+                <button onclick="check()">校验</button>
+            </td>
+        </tr>-->
+    </table>
+</body>
+</html>
